@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Calculator</title>
+   <style>
+      .cals {
+         text-align: center;
+         margin-top: 24px;
+         color: darkblue;
+      }
+
+      table {
+         margin: auto;
+         background-origin: padding-box;
+      }
+
+      input {
+         font-size: 23px;
+         width: auto;
+      }
+
+      button {
+         font-size: 23px;
+         background-color: cornflowerblue;
+         width: 60px;
+         height: 70px;
+      }
+
+      .calculator {
+         border: 3px firebrick;
+
+      }
+   </style>
+</head>
+<script>
+
+
+</script>
+
+<body>
+   <div class="cals">
+      <h1>Calculator </h1>
+      <table>
+         <tr>
+            <td colspan="4">
+               <input type="text" name="screen" id="screen">
+            </td>
+         </tr>
+         <tr>
+            <td colspan="3">
+               <button style="width:100%;" onclick="clearscreen()">CLEAR</button>
+            </td>
+            <td> <button style="width:80%;" onclick="BK()">BK</button> </td>
+         </tr>
+         <tr>
+            <td><button onclick="display('9')">9</button></td>
+            <td><button onclick="display('8')">8</button></td>
+            <td><button  onclick="display('7')">7</button></td>
+            <td><button  onclick="display('+')">+</button></td>
+         </tr>
+         <tr>
+            <td><button onclick="display('6')">6</button></td>
+            <td><button onlick="display('5')">5</button></td>
+            <td><button onlick="display('4')">4</button></td>
+            <td><button onclick="display('-')">-</button></td>
+         </tr>
+         <tr>
+            <td><button onclick="display('3')">3</button></td>
+            <td><button onclick="display('2')">2</button></td>
+            <td><button onclick="display('1')">1</button></td>
+            <td><button onclick="display('*')">*</button></td>
+         </tr>
+         <tr>
+            <td><button onclick="display('.')">.</button></td>
+            <td><button onclick="display('0')">0</button></td>
+            <td><button onclick="calculate('=')">=</button></td>
+            <td><button>/</button></td>
+         </tr>
+      </table>
+   </div>
+   </div>
+
+   <script>
+      function display(no){
+         document.getElementById("screen").value += no;
+      }
+
+      function clearscreen()
+      {
+         document.getElementById("screen").value = "";
+      }
+
+      function calculate()
+      {
+         let expression = document.getElementById("screen").value;
+         let result = eval(expression);
+         document.getElementById("screen").value = result;
+      }
+      function BK()
+      {
+         document.getElementById("screen").value="undefined";
+      }
+   </script>
+</body>
+
+</html>

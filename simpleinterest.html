@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter your amount
+    <input type="number" id="no1"/>
+    enter year
+    <input type="number" id="no2"/>
+    enter rate of interest
+    <input type="number" id="no3"/>
+    enter discount percent
+    <input type="number" id="percent"/>
+    <button onclick="calculate()">result</button>
+    <p id="result"></p>
+    <script>
+        function calculate(){
+            let p,n,r,si,percent;
+            p=Number(document.getElementById("no1").value);
+            n=Number(document.getElementById("no2").value);
+            r=Number(document.getElementById("no3").value);
+            percent=Number(document.getElementById("percent").value);
+            si=p*n*r/100;
+            let discount=0;
+            document.getElementById("result").innerHTML = A"interest is:" + d;
+
+
+            if(d>200000)
+            {
+                discount=(percent/100)*d;
+                d=d-discount;
+                document.getElementById("result").innerHTML += "<br/>Discount is: " + discount;
+                document.getElementById("result").innerHTML += "<br/>Final amount is: " + d;
+
+            }
+                
+         }
+    </script>   
+</body>
+</html>

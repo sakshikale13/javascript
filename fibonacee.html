@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    enter the number:<input type="number" id="number">
+    <button onclick="display()">show</button>
+    <p id="result"></p>
+    <script>
+        function display() {
+            var number= Number(document.getElementById("number").value);
+            let n1=0, n2=1, n3;
+       for (let i=1; i<=number; i++) {
+        n3 = n1 + n2;
+        n1 = n2;
+        n2 = n3;
+        document.getElementById("result").innerHTML += n3 + " ";
+         }
+        }
+    </script>
+</body>
+</html>

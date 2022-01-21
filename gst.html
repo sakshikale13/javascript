@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+<label for="price">Price (before GST): </label>
+<input id="price" type="number" value="1" />
+</div>
+<div>
+<label for="gst">GST rate (%): </label>
+<input id="gst" type="number" value="0.6" />
+</div>
+<div>
+<button onclick="inpChange()">Calculate</button>
+</div>
+<div>
+<label for="priceGst">Price (GST inclusive) : </label>
+<input id="priceGst" type="number" readonly />
+</div>
+</body>
+</html>
+
+
+<script>
+priceEle = document.getElementById("price");
+gstEle = document.getElementById("gst");
+priceGstEle = document.getElementById("priceGst");
+function calculateGst(price, tax) {
+return (price * tax/100) + price;
+} 
+function inpChange() {
+if(!isNaN(priceEle.value) && !isNaN(gstEle.value)) {
+price = Number(priceEle.value);
+gst = Number(gstEle.value);
+priceGstEle.value = calculateGst(price, gst).toFixed(3);
+}
+}
+inpChange();
+</script>

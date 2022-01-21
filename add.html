@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <script>
+    function add(){
+    var a,b,c;
+    a=Number(document.getElementById("first").value);
+    b=Number(document.getElementById("second").value);
+    c=a+b;
+    document.getElementById("answer").value=c;
+    }
+</script>
+</head>
+<body>
+    <p> Enter the first number: <input id="first"></p>
+    <p> Enter the second number: <input id="second"></p>
+     <button onclick="add()">result</button>
+     <input id="answer">
+
+</body>
+</html>

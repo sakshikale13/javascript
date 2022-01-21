@@ -1,0 +1,26 @@
+<html>
+<head>
+<body>
+<input id="price">price
+<br></br>
+<input type="checkbox">
+<label for="checkbox">
+<label for="gst">with </label>
+<input type="checkbox">
+<label for="gst">without</label>
+<br></br>
+<button onlick="getprice()">
+get total
+</button>
+<br></br>
+<input readonly id="total">
+<script>
+getprice=function(){
+var numval1=number(document.getElementById("price").value);
+var numval2=number(document.getElementById("discount").value);/100;
+var totalvalue= numval1- (numval1*numval2)
+document.getElementById("total").value=totalValue.toFixed(2);
+}
+</script>
+</body>
+</html>
